@@ -1,0 +1,5 @@
+GEN[*].AD
+GEN[*].DP
+GEN[*].GQ
+GEN[*].GT
+GEN[*].PL

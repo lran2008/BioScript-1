@@ -1,0 +1,11 @@
+#ID	hmkim87
+#PORT	22
+#IP	182.162.88.8
+/nG/Data/3804/__OUTPUT__/final_unmapped.bam	/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WGS/Unmapped_BAM/TN1311D4695_1.unmapped.bam
+/nG/Data/3846/__OUTPUT__/final_unmapped.bam	/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WGS/Unmapped_BAM/TN1311D4695_2.unmapped.bam
+/nG/Data/3673/__OUTPUT__/final_unmapped.bam	/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WGS/Unmapped_BAM/TN1311D4696_1.unmapped.bam
+/nG/Data/3805/__OUTPUT__/final_unmapped.bam	/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WGS/Unmapped_BAM/TN1311D4696_2.unmapped.bam
+/nG/Data/2125/__OUTPUT__/final_unmapped.bam	/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WGS/Unmapped_BAM/TG1201D2966.unmapped.bam
+/nG/Data/3661/__OUTPUT__/final_unmapped.bam	/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WGS/Unmapped_BAM/TN1311D4693.unmapped.bam
+/nG/Data/3662/__OUTPUT__/final_unmapped.bam	/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WGS/Unmapped_BAM/TN1311D4694_1.unmapped.bam
+/nG/Data/3726/__OUTPUT__/final_unmapped.bam	/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WGS/Unmapped_BAM/TN1311D4694_2.unmapped.bam

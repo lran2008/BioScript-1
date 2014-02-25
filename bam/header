@@ -1,0 +1,39 @@
+@HD	VN:1.0	GO:none	SO:coordinate
+@SQ	SN:chr1	LN:249250621
+@SQ	SN:chr2	LN:243199373
+@SQ	SN:chr3	LN:198022430
+@SQ	SN:chr4	LN:191154276
+@SQ	SN:chr5	LN:180915260
+@SQ	SN:chr6	LN:171115067
+@SQ	SN:chr7	LN:159138663
+@SQ	SN:chr8	LN:146364022
+@SQ	SN:chr9	LN:141213431
+@SQ	SN:chr10	LN:135534747
+@SQ	SN:chr11	LN:135006516
+@SQ	SN:chr12	LN:133851895
+@SQ	SN:chr13	LN:115169878
+@SQ	SN:chr14	LN:107349540
+@SQ	SN:chr15	LN:102531392
+@SQ	SN:chr16	LN:90354753
+@SQ	SN:chr17	LN:81195210
+@SQ	SN:chr18	LN:78077248
+@SQ	SN:chr19	LN:59128983
+@SQ	SN:chr20	LN:63025520
+@SQ	SN:chr21	LN:48129895
+@SQ	SN:chr22	LN:51304566
+@SQ	SN:chrX	LN:155270560
+@SQ	SN:chrY	LN:59373566
+@SQ	SN:chrM	LN:16571
+@RG	ID:CHA37-node1-1	PL:Illumina 1.8+	SM:CHA37
+@RG	ID:CHA37-node1-10	PL:Illumina 1.8+	SM:CHA37
+@RG	ID:CHA37-node1-11	PL:Illumina 1.8+	SM:CHA37
+@RG	ID:CHA37-node1-2	PL:Illumina 1.8+	SM:CHA37
+@RG	ID:CHA37-node1-3	PL:Illumina 1.8+	SM:CHA37
+@RG	ID:CHA37-node1-4	PL:Illumina 1.8+	SM:CHA37
+@RG	ID:CHA37-node1-5	PL:Illumina 1.8+	SM:CHA37
+@RG	ID:CHA37-node1-6	PL:Illumina 1.8+	SM:CHA37
+@RG	ID:CHA37-node1-7	PL:Illumina 1.8+	SM:CHA37
+@RG	ID:CHA37-node1-8	PL:Illumina 1.8+	SM:CHA37
+@RG	ID:CHA37-node1-9	PL:Illumina 1.8+	SM:CHA37
+@PG	ID:MarkDuplicates	PN:MarkDuplicates	VN:1.92(1464)	CL:net.sf.picard.sam.MarkDuplicates INPUT=[/nG/Data/3121/step2_makebam/node1-1.bam, /nG/Data/3121/step2_makebam/node1-10.bam, /nG/Data/3121/step2_makebam/node1-11.bam, /nG/Data/3121/step2_makebam/node1-2.bam, /nG/Data/3121/step2_makebam/node1-3.bam, /nG/Data/3121/step2_makebam/node1-4.bam, /nG/Data/3121/step2_makebam/node1-5.bam, /nG/Data/3121/step2_makebam/node1-6.bam, /nG/Data/3121/step2_makebam/node1-7.bam, /nG/Data/3121/step2_makebam/node1-8.bam, /nG/Data/3121/step2_makebam/node1-9.bam] OUTPUT=/dev/stdout METRICS_FILE=/nG/Data/3121/temp/picard_info.txt REMOVE_DUPLICATES=true ASSUME_SORTED=true MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=1000000 TMP_DIR=[/nG/Data/3121/temp] QUIET=true VALIDATION_STRINGENCY=LENIENT COMPRESSION_LEVEL=0 MAX_RECORDS_IN_RAM=2000000    PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 SORTING_COLLECTION_SIZE_RATIO=0.25 READ_NAME_REGEX=[a-zA-Z0-9]+:[0-9]:([0-9]+):([0-9]+):([0-9]+).* OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 VERBOSITY=INFO CREATE_INDEX=false CREATE_MD5_FILE=false
+@PG	ID:GATK IndelRealigner	VN:2.3-9-gdcdccbb	CL:knownAlleles=[(RodBinding name=knownAlleles source=/nG/Reference/hgdownload.cse.ucsc.edu/goldenPath/hg19/KNOWNINDEL/Mills_and_1000G_gold_standard.indels.hg19.vcf), (RodBinding name=knownAlleles2 source=/nG/Reference/hgdownload.cse.ucsc.edu/goldenPath/hg19/KNOWNINDEL/1000G_phase1.indels.hg19.vcf)] targetIntervals=/nG/Data/3121/vcf1/node1/chr21/Databind/chr21.bam.intervals LODThresholdForCleaning=5.0 consensusDeterminationModel=USE_READS entropyThreshold=0.15 maxReadsInMemory=150000 maxIsizeForMovement=3000 maxPositionalMoveAllowed=200 maxConsensuses=30 maxReadsForConsensuses=120 maxReadsForRealignment=20000 noOriginalAlignmentTags=false nWayOut=null generate_nWayOut_md5s=false check_early=false noPGTag=false keepPGTags=false indelsFileForDebugging=null statisticsFileForDebugging=null SNPsFileForDebugging=null
