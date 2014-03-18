@@ -16,11 +16,11 @@ if (@ARGV != 2){
 my $INPUT_S = $ARGV[0];
 my $VCF_OUT = $ARGV[1];
 
-my $PATH_tabix = "$root/../../tools/tabix";
+my $PATH_tabix = "/BiOfs/hmkim87/BioTools/tabix/0.2.6";
 my $bgzip = $PATH_tabix."/bgzip";
 my $tabix = $PATH_tabix."/tabix";
 
-my $vcftools = "$root/../../tools/vcftools_0.1.11";
+my $vcftools = "/BiOfs/hmkim87/BioTools/vcftools/0.1.12";
 my $LIB_vcftools = $vcftools."/lib/perl5/site_perl";
 my $PATH_vcftools = $vcftools."/bin";
 my $merge = $PATH_vcftools."/vcf-merge";
@@ -30,6 +30,9 @@ $ENV{'PATH'}.= ":".$PATH_tabix;
 
 my @FILES = glob($INPUT_S);
 for (my $i=0; $i<@FILES; $i++){
+	if ($FILES[$i] =~ /\.gz$/){
+		next;	
+	}
 	my $command = "$bgzip -c $FILES[$i] > $FILES[$i].gz";
 	if (!-f "$FILES[$i].gz"){
 		print STDERR "$command\n";
