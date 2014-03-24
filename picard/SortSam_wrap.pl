@@ -11,24 +11,27 @@ my $PWD = dirname(__FILE__);
 my $ROOT = abs_path($PWD);
 
 my $bam_file_pattern = $ARGV[0];
-#my $bam_file_pattern = "/BiO3/BioProjects/KRISS-Korean-Reference-2013-05/Analyses/Insert_Size_Calculation/mapping_bwa/*.bam";
 
 my @files = glob($bam_file_pattern);
 
+my $script = "$ROOT/SortSam.pl";
+
 foreach my $file (@files){
 	my ($filename,$filepath,$fileext) = fileparse($file, qr/\.[^.]*/);
-	my $sc = "perl $ROOT/CollectInsertSizeMetrics.pl $file /BiOfs/BioResources/References/Human/hg19/BWA_0.7.7_Index/hg19.fa";
-	my $job_script_name = "$filepath/$filename.CollectInsertSizeMetrics.sh";
-	my $job_script_out = "$filepath/$filename.CollectInsertSizeMetrics.o";
-	writeScript($job_script_name,$sc,$filename,$job_script_out);
+
+	my $infile = $file;
+	my $outfile = "$filepath/$filename.sorted$fileext";
+
+	my $cmd = "perl $script $infile $outfile";
+
+	my $job_script_name = "$filepath/$filename.SortSam.sh";
+	my $job_script_out = "$filepath/$filename.SortSam.o";
+	writeScript($job_script_name,$cmd,$filename,$job_script_out);
 	runScript($job_script_name);
 }
 
 sub runScript{
         my $q_sh = shift;
-        #my $q_err = shift;
-        #my $q_out = shift;
-        #my $jobname = shift;
         my $dependency_job = shift;
 
         my $command;
