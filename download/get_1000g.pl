@@ -2,23 +2,42 @@
 
 use strict;
 
-my $download_vcf = "/BiOfs/hmkim87/BioResources/Reference/Human/Resources/1000genome/ALL.2of4intersection.20100804.genotypes.vcf.gz";
+use File::Basename; 
+
+my $kgvcfpath = "/BiOfs/hmkim87/BioResources/Reference/Human/Resources/1000genome/ALL.2of4intersection.20100804.genotypes.vcf.gz";
 
 if (@ARGV !=2){
 	printUsage();
 }
-my $vcf_file = $ARGV[0];
-my $out_vcf = $ARGV[1];
+my $infile = $ARGV[0];
+my $outfilepath = $ARGV[1];
 
-my $tabix = "/BiO/hmkim87/BioTools/tabix/0.2.6/tabix";
-my $command = "$tabix -H $download_vcf > $out_vcf";
+my $bgzip = "/BiOfs/hmkim87/BioTools/tabix/0.2.6/bgzip";
+my $tabix = "/BiOfs/hmkim87/BioTools/tabix/0.2.6/tabix";
+
+=pod
+if ($vcf_file !~ /\.gz$/){
+	print "$bgzip $vcf_file\n";
+	#system("$bgzip $vcf_file");
+	$vcf_file = $vcf_file.".gz";
+}
+
+if (!-f $vcf_file.".tbi"){
+	print "$tabix $vcf_file\n";
+	#system("$tabix $vcf_file");
+}
+=cut
+
+my ($filename,$filepath,$fileext) = fileparse($infile, qr/\.[^.]*/); 
+
+my $command = "$tabix -H $kgvcfpath > $outfilepath";
 #print $command."\n";
 system($command);
 
 my $cnt = 0;
 my $retval = time();
 my $start_time = gmtime( $retval);
-open my $fh, '<:encoding(UTF-8)', $vcf_file or die;
+open my $fh, '<:encoding(UTF-8)', $infile or die;
 while (my $row = <$fh>) {
 	if ($row =~ /^#/){
 		next;
@@ -28,7 +47,10 @@ while (my $row = <$fh>) {
 
 	my $chr = $l[0];
 	my $pos = $l[1];
-	$command = "$tabix $download_vcf $chr:$pos-$pos >> $out_vcf";
+	if ($chr =~ /^chr/){
+		$chr =~ s/^chr//;
+	}
+	$command = "$tabix $kgvcfpath $chr:$pos-$pos >> $outfilepath";
 	#print $command."\n";
 	system($command);
 	$cnt++;
@@ -44,6 +66,5 @@ close($fh);
 
 sub printUsage{
 	print "Usage: perl $0 <in.vcf> <out.vcf>\n";
-	print "Description: db vcf <$download_vcf>\n";
 	exit;
 }
