@@ -10,6 +10,6 @@ $in  = Bio::AlignIO->new(-file => $infile ,
 $out = Bio::AlignIO->new(-file => ">".$outfile,
                          -format => 'clustalw');
  
-while ( my $aln = $in->next_aln ) { 
+while ( my $aln = $in->next_aln ) {
   $out->write_aln($aln); 
 }
