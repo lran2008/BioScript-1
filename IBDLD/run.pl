@@ -8,6 +8,7 @@
 ##
 ## History:
 ## - Version 0.1 ( Apr 8, 2014)
+## - Version 0.2 ( Apr 9, 2014) - step1, step2 split
 ###
 sub runScript ($;$){
         my $job_script_file = shift;
