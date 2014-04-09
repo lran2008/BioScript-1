@@ -1,5 +1,14 @@
 #!/usr/bin/perl -w
-
+##
+# Function: only split fasta if has more shorter than N length in multi fasta file.
+# Author: Hyunmin Kim
+# Senior Researcher
+# Genome Research Foundation
+# E-Mail: brandon.kim.hyunmin@gmail.com
+#
+# History:
+# - Version 0.1 ( Apr 8, 2014)
+##
 use strict;
 
 if (@ARGV != 3){ printUsage(); }
@@ -15,21 +24,21 @@ my $length = $ARGV[2];
 if (!-f $in_fasta.".fai"){
 	$command = "$samtools faidx $in_fasta";
 	print "indexing...<$in_fasta>\n";
-	system($command);
+	system($command) and die $!;
 	print "indexing...end<$in_fasta.fai>\n";
 }
 
 my $selectSeq = "selectSeq.bed";
 $command = "awk '{if(\$2 > $length) print \$1 \"\\t0\\t\" \$2 \"\\t\" \$1}' $in_fasta.fai > $selectSeq";
 print $command."\n";
-system($command);
+system($command) and die $!;
 
 $command = "$fastaFromBed -fi $in_fasta -bed $selectSeq -name -fo $selectSeqFa";
 print $command."\n";
-system($command);
+system($command) and die $!;
 
 $command = "rm $selectSeq";
-system($command);
+system($command) and die $!;
 
 sub printUsage{
 	print "Usage: perl $0 <in.fasta> <out.fasta> <length>\n";
