@@ -9,17 +9,14 @@ my $overlap = "/BiOfs/hmkim87/Linux/_script/overlap";
 
 my $file1 = $ARGV[0];
 my $file2 = $ARGV[1];
-#my $file1 = "/BiO/hmkim87/Denovo/RepeatAnnotation/Tiger/Tiger_RepeatMasker_OUTPUT/Result/merged.gff";
-#my $file2 = "/BiO/hmkim87/Denovo/FromBGI/Tiger/Repeat/Repeatmasker/repeatmasker.gff";
 
 my $tmp_file1 = "$file1.tmp.gff";
 my $tmp_file2 = "$file2.tmp.gff";
 
-my $cmd_tmp_1 = "grep -v \"\^#\" $file1 | sed 's/[;=]/ /g' - > $tmp_file1";
+my $cmd_tmp_1 = "grep -v \"\^#\" $file1 | sed 's/ /_/g' | sed 's/[;=]/ /g' - > $tmp_file1";
 runCommand($cmd_tmp_1);
-my $cmd_tmp_2 = "grep -v \"\^#\" $file2 | sed 's/[;=]/ /g' - > $tmp_file2";
+my $cmd_tmp_2 = "grep -v \"\^#\" $file2 | sed 's/ /_/g' | sed 's/[;=]/ /g' - > $tmp_file2";
 runCommand($cmd_tmp_2);
-
 
 my $compare_out = "$file1.compare_with_file2.out";
 my $cmd_overlap = "$overlap $tmp_file1 $tmp_file2 -o $compare_out";
