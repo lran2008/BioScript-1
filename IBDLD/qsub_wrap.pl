@@ -58,7 +58,7 @@ sub writeScript ($$$$;$){
 my $IBDLD = "/BiOfs/hmkim87/BioTools/IBDLD/3.12/IBDLD";
 
 # define project directory
-my $proj= "/BiO/hmkim87/IBDLD/Test";
+my $proj= "/BiO/hmkim87/IBDLD/Test2";
 # define default directory
 my $input_path = "$proj/Input"; checkDir($input_path);
 my $script_path = "$proj/Script"; checkDir($script_path); 
@@ -94,8 +94,8 @@ foreach my $chr (@chr_list){
 	my $cmd_split = "mkdir -p $outfile_split_dir\n".
 		"cd $outfile_split_dir\n".
 		"$plink --nonfounders --allow-no-sex --noweb --file $filepath/$filename --chr $chr --recode --out $outfile_split_base\n".
-		"$IBDLD -o $outfile_split_base -p $outfile_split_base.ped -m $outfile_split_base.map -method $method -ploci $ploci_n -step 1 -r $mem_size -phcol 1\n".
-		"$IBDLD -o $outfile_split_base -method $method -ploci $ploci_n -step 2 -r $mem_size";
+		"$IBDLD -o $outfile_split_base -p $outfile_split_base.ped -m $outfile_split_base.map -method $method -ploci $ploci_n -step 1 -r $mem_size -phcol 1 -ibd 90 -segment\n".
+		"$IBDLD -o $outfile_split_base -method $method -ploci $ploci_n -step 2 -r $mem_size -ibd 90 -segment";
 
 	my $q_name_split = "IBDLD_$chr";
 	my $q_sh_split = "$script_path/$q_name_split.sh";

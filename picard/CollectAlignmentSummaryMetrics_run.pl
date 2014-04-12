@@ -1,4 +1,14 @@
 #!/usr/bin/perl -w
+##
+# Function: Picard CollectAlignmentSummaryMetrics Wrapper
+# Author: Hyunmin Kim
+# Senior Researcher
+# Genome Research Foundation
+# E-Mail: brandon.kim.hyunmin@gmail.com
+#
+# History:
+# - Version 0.1 ( Apr 11, 2014)
+##
 
 use strict;
 use File::Basename;
