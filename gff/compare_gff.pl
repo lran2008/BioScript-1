@@ -5,7 +5,7 @@ use strict;
 if (@ARGV !=2){
 	printUsage();
 }
-my $overlap = "/BiOfs/hmkim87/Linux/_script/overlap";
+my $overlap = "/BiOfs/hmkim87/BioScript/gff/overlap";
 
 my $file1 = $ARGV[0];
 my $file2 = $ARGV[1];

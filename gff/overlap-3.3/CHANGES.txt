@@ -1,0 +1,30 @@
+3.3 (2011-06-16)
+================
+
+Internal
+========
+
+- Create binaries for 64 and 32 bit
+
+3.2 (2011-05-20)
+================
+
+Bug Fixes
+---------
+
+- Fix for the -m mode option for defining the kind of overlap information one wants to retrieve 
+  about file2 features overlapping file1 features.
+  When using mode=n where n>=10 and n is even, the (key,value) pairs provided in the output gff 
+  files are now correctly ordered.
+
+Internal
+--------
+
+- The file1 is now first sorted using the Unix sort program, in order to avoid memory problems
+
+- Now handles stack overflow and out of memory errors explicitly
+
+3.1 (2010-03)
+=============
+
+- Initial release.
