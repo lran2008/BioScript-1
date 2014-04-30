@@ -9,18 +9,22 @@ if (@ARGV !=2){
 my $in_fasta = $ARGV[0];
 my $out_gff = $ARGV[1];
 
-#my $in_fasta = "/var/lib/gbrowse/databases/koref0_scaffolds/Korean55.scafSeq.fill.gapclose.1.fa";
-#my $out_gff = "/var/lib/gbrowse/databases/koref0_scaffolds/Korean55.scafSeq.fill.gapclose.1.gff3";
-#my $bwa = "/BiO/BioTools/bwa-0.7.8/bwa";
-my $samtools = "/BiOfs/BioTools/samtools-0.1.19/samtools";
+
+my $os = getOS();
+my $samtools = "/BiOfs/hmkim87/BioTools/samtools/0.1.19/samtools";
+if ($os eq "CentOS"){
+	$samtools = "/BiOfs/hmkim87/BioTools/samtools/0.1.19_CentOS/samtools";
+}elsif ($os eq "Ubuntu"){
+	$samtools = "/BiOfs/hmkim87/BioTools/samtools/0.1.19/samtools";
+}
 
 # fa index with samtools
 my $fai_file = $in_fasta.".fai";
 if (!-f $fai_file){
 	my $cmd_fa_idx = "$samtools faidx $in_fasta";
 	print $cmd_fa_idx."\n";
+	system($cmd_fa_idx);
 }
-
 
 open my $gff, '>:encoding(UTF-8)', $out_gff or die;
 print $gff "##gff-version 3\n";
@@ -46,6 +50,22 @@ while (my $row = <$fh>) {
 }
 close($fh);
 close($gff);
+
+sub getOS{
+        my $get_os_info = "cat /etc/issue";
+        my $os_info = `$get_os_info`;
+        chomp($os_info);
+
+        my $result;
+        if ($os_info =~ /^CentOS/i){
+                $result = "CentOS";
+        }elsif ($os_info =~ /^Ubuntu/i){
+                $result = "Ubuntu";
+        }else{
+                die "ERROR! Couldn't recognize the OS information <$get_os_info>\n";
+        }
+        return $result;
+}
 
 sub printUsage{
 	print "Usage: perl $0 <in.fasta> <out.gff>\n";
