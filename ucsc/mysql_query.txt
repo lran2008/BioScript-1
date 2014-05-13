@@ -1,0 +1,1 @@
+mysql -h genome-mysql.cse.ucsc.edu -u genome -A -D hg19 --skip-column-names < snps.sql

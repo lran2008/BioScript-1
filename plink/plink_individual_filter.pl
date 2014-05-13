@@ -12,7 +12,7 @@ my $indiv_list_file = $ARGV[2];
 my $plink = "/BiOfs/hmkim87/BioTools/plink/1.07/plink";
 
 my $ped_file = "$infile_prefix.ped";
-my $temp_list_file = $indiv_list_file.".tmp";
+my $temp_list_file = $outfile_prefix.".tmp";
 open my $fh_write, '>:encoding(UTF-8)', $temp_list_file or die "<$temp_list_file> $!\n";
 open my $fh, '<:encoding(UTF-8)', $indiv_list_file or die;
 while (my $row = <$fh>) {
@@ -30,7 +30,8 @@ while (my $row = <$fh>) {
 close($fh);
 close($fh_write);
 
-my $command = "$plink --noweb --file $infile_prefix --keep $temp_list_file --recode --out $outfile_prefix";
+#my $command = "$plink --noweb --file $infile_prefix --keep $temp_list_file --recode --out $outfile_prefix";
+my $command = "$plink --noweb --file $infile_prefix --keep $temp_list_file --recode --missing-genotype N --out $outfile_prefix";
 print $command."\n";
 system($command);
 
