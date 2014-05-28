@@ -22,12 +22,15 @@ if (@ARGV != 1){ printUsage();}
 #   Version 1.0 (May 15, 2014) : support FastQC version 0.10.1 (http://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
 ##
 
+# Future Plan
+# Overrepresented sequences check!
+# grep "TruSeq" */*_fastqc/fastqc_data.txt  | less -S
+
 my $fastqc_data_file_pattern = $ARGV[0];
 #$fastqc_data_file_pattern = "/BiO/hmkim87/PAPGI/WGS/SRP001453/Result/Raw_FastQC/*/*_fastqc/fastqc_data.txt";
 
 my @files = glob($fastqc_data_file_pattern);
 if ($#files < 0){ die; }
-
 
 my $total_seq = 0;
 print "# Filename\tEncoding\tTotal Sequences\tSequence length\t\%GC\n";

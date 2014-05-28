@@ -2,6 +2,9 @@
 
 use strict;
 
+if (@ARGV != 1){
+	printUsage();
+}
 my $in_gff =$ARGV[0];
 
 
@@ -41,3 +44,8 @@ while (my $row = <$fh>) {
 	print $row."\n";
 }
 close($fh);
+
+sub printUsage{
+	print "Usage: perl $0 <in.gff>\n";
+	exit;	
+}

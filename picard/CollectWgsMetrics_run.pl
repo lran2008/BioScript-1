@@ -1,14 +1,13 @@
 #!/usr/bin/perl -w
 ##
-# Function: Picard CollectAlignmentSummaryMetrics Wrapper
+# Function: Picard CollectWgsMetrics Wrapper
 # Author: Hyunmin Kim
 # Senior Researcher
 # Genome Research Foundation
 # E-Mail: brandon.kim.hyunmin@gmail.com
 #
 # History:
-# - Version 0.1 ( Apr 11, 2014)
-# - Version 0.2 ( May 26, 2014)
+# - Version 0.1 ( Apr 28, 2014)
 ##
 
 use strict;
@@ -37,15 +36,19 @@ if (@ARGV != 2){
 my $bam_pattern = $ARGV[0];
 my $REFERENCE_SEQUENCE = $ARGV[1];
 
-my $CollectAlignmentSummaryMetrics = "$picard_path/CollectAlignmentSummaryMetrics.jar";
+my $CollectWgsMetrics = "$picard_path/CollectWgsMetrics.jar";
+
+my $out_keyword = "CollectWgsMetrics";
 
 my @bam_files = glob($bam_pattern);
 my @thread;
 foreach my $bam_file (@bam_files){
 	my ($file_name,$file_path,$file_ext) = fileparse($bam_file, qr/\.[^.]*/);
-	my $out_metrics = $file_path.$file_name.".CollectAlignmentSummaryMetrics";
-	my $out_log = $file_path.$file_name.".CollectAlignmentSummaryMetrics.log";
-	$_ = threads->new(\&CollectAlignmentSummaryMetrics,$bam_file,$out_metrics,$out_log);
+	my $out_metrics = $file_path.$file_name.".".$out_keyword;
+	my $out_log = $file_path.$file_name.".".$out_keyword.".log";
+	my $minMapQual = 0; # default 20
+	my $minBaseQual = 0; # default 20
+	$_ = threads->new(\&CollectWgsMetrics,$bam_file,$out_metrics,$minMapQual,$minBaseQual,$out_log);
 	push @thread, $_;
 }
 
@@ -53,14 +56,15 @@ foreach (@thread){
 	my $t_res = $_ -> join;
 }
 
-sub CollectAlignmentSummaryMetrics{
+sub CollectWgsMetrics{
 	my $INPUT = shift;
 	my $OUTPUT = shift;
+	my $MQ = shift;
+	my $Q = shift;
 	my $LOG = shift;
-	my $command = "java -jar $CollectAlignmentSummaryMetrics INPUT=$INPUT OUTPUT=$OUTPUT REFERENCE_SEQUENCE=$REFERENCE_SEQUENCE ASSUME_SORTED=false VALIDATION_STRINGENCY=LENIENT 2> $LOG";
-	#my $command = "java -jar $CollectAlignmentSummaryMetrics INPUT=$INPUT OUTPUT=$OUTPUT ASSUME_SORTED=false";
+	my $command = "java -jar $CollectWgsMetrics INPUT=$INPUT OUTPUT=$OUTPUT REFERENCE_SEQUENCE=$REFERENCE_SEQUENCE MINIMUM_MAPPING_QUALITY=$MQ MINIMUM_BASE_QUALITY=$Q 2> $LOG";
 	print $command."\n";
-	system($command);
+	system($command);	
 }
 
 sub checkFile{

@@ -7,8 +7,10 @@ if (@ARGV !=2){
 	print "perl $0 <in.fasta> <in.gff>\n";
 	exit;
 }
-my $fasta = "/BiO/hmkim87/GBrowse/Fasta/Korean55.scafSeq.fill.gapclose.1";
-my $gff = "/BiO/hmkim87/GBrowse/GFF/Korean55.gene.gff";
+#my $fasta = "/BiO/hmkim87/GBrowse/Fasta/Korean55.scafSeq.fill.gapclose.1";
+#my $gff = "/BiO/hmkim87/GBrowse/GFF/Korean55.gene.gff";
+my $fasta = $ARGV[0];
+my $gff = $ARGV[1];
 
 my ($filename_gff,$filepath_gff,$fileext_gff) = fileparse($gff, qr/\.[^.]*/); 
 

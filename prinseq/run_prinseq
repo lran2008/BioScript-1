@@ -18,9 +18,7 @@ my $PWD = dirname(__FILE__);
 my $ROOT = abs_path($PWD);  
 
 # tool	
-#my $prinseq_path = "$ROOT/prinseq-lite-0.20.4";
 my $prinseq_path = "/BiOfs/BioTools/prinseq-lite-0.20.4/";
-#my $fastqc = "/nG/Process/Tools/FastQC/fastqc_v0.10.1/fastqc";
 my $fastqc = "/BiOfs/BioTools/FastQC/FastQC_v0.10.1/fastqc";
 
 my @input_files = read_input_set($info_tsv);
@@ -83,7 +81,7 @@ sub prinseq{
 	#my $command = "perl $prinseq -fastq $r1 -fastq2 $r2 $param -log $log -out_good $out_good -out_bad $out_bad -graph_data test.gd";
 	#my $command = "perl $prinseq -fastq $r1 -fastq2 $r2 $param -log $log -out_good $out_good -out_bad $out_bad -stats_all";
 	print $command."\n";
-	system($command);
+#	system($command);
 }
 
 sub read_input_set{

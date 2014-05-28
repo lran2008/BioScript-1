@@ -1,0 +1,25 @@
+#!/usr/bin/perl -w
+
+use strict;
+
+my $r1_read = "";
+my $r2_read = "";
+my $r1_out_read = "";
+my $r2_out_read = "";
+my $mcf_param = "-0 -D 0 n/a";
+
+fastqMcf($r1_read,$r2_read,$r1_out_read,$r2_out_read,$mcf_param);
+#fastq-mcf -0 -D 35 n/a fastq1.gz fastq2.gz -o out1.gz -o out2.gz
+
+
+
+sub fastqMcf{
+	my $r1 = shift;
+	my $r2 = shift;
+	my $r1_out = shift;
+	my $r2_out = shift;
+	my $param = shift;
+	my $fastqMcf = "/BiOfs/BioTools/ea-utils.1.1.2-537/fastq-mcf";
+	my $command = "$fastqMcf $param $r1 $r2 -o $r1_out -o $r2_out";
+	print $command."\n";
+}

@@ -2,13 +2,13 @@
 
 use strict;
 
-if (@ARGV !=2){
+if (@ARGV !=3){
 	printUsage();
 }
 
 my $in_fasta = $ARGV[0];
-my $out_gff = $ARGV[1];
-
+my $gff_source = $ARGV[1];
+my $out_gff = $ARGV[2];
 
 my $os = getOS();
 my $samtools = "/BiOfs/hmkim87/BioTools/samtools/0.1.19/samtools";
@@ -34,7 +34,7 @@ while (my $row = <$fh>) {
 	my @l = split /\t/, $row;
 	my ($seqid, $source, $type, $start, $end, $score, $strand, $phase, $attributes);
 	$seqid = $l[0];
-	$source = "PGI";
+	$source = $gff_source;
 	$type = "scaffold";
 	$start = 1;
 	$end = $l[1];
@@ -68,6 +68,6 @@ sub getOS{
 }
 
 sub printUsage{
-	print "Usage: perl $0 <in.fasta> <out.gff>\n";
+	print "Usage: perl $0 <in.fasta> <gff_source> <out.gff>\n";
 	exit;
 }
