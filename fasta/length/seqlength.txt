@@ -1,0 +1,3 @@
+$ ruby seqlength.rb /BiO/hmkim87/BioResources/Data/FASTA/toy.fa
+seq1 1575
+seq2 1584

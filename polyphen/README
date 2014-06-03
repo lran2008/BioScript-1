@@ -1,0 +1,9 @@
+# Input
+	.bgt
+	.fasta (gene set)
+
+# Make polyphen2 input file
+	bgt_to_pph_input.pl
+
+# run polyphen2
+ 	run_polyphen_batch.pl

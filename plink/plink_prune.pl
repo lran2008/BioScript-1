@@ -17,9 +17,13 @@ use strict;
 #    are not removed.
 #
 # History:
-#   Version 1.0 (August 1, 2002): first non-beta release.
+#   Version 1.0 (): first non-beta release.
+#   Version 1.1 (June 2, 2014): printUsage() add
 ##
 
+if (@ARGV != 1){
+	printUsage();
+}
 my $inprefix = $ARGV[0];
 
 my $plink = "/BiOfs/hmkim87/BioTools/plink/1.07/plink";
@@ -53,4 +57,9 @@ sub plink_prune{
 	my $plink_param = shift;
 	my $command = "$plink --file $plink_in $plink_param --noweb";
 	return $command;
+}
+
+sub printUsage{
+	print "Usage: perl $0 <plink_input_prefix>\n";
+	exit;
 }
