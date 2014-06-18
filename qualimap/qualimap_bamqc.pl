@@ -25,11 +25,11 @@ use Getopt::Long;
 
 use File::Basename qw(dirname);
 use Cwd qw(abs_path);
-#use lib dirname(dirname abs_path $0) . '/perl/lib';
 use lib '/BiOfs/BioPeople/brandon/language/perl/lib/';
 
-use Brandon::General qw(say RoundXL);
-use Brandon::Bio::BioTools qw(%TOOL $SAMTOOLS $GATK $PICARD_PATH $BWA $VCFTOOLS_PATH $VCFTOOLS_LIB_PATH $BEDTOOLS_PATH $JAVA $qualimap);
+use Brandon::Bio::BioTools qw($qualimap);
+
+$qualimap = "/BiOfs/hmkim87/BioTools/QualiMap/qualimap-build-12-06-14/qualimap";
 
 my $MEM_size_java;
 my $THREAD;

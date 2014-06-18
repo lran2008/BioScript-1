@@ -9,7 +9,7 @@ my $r1 = $ARGV[0];
 my $r2 = $ARGV[1];
 my $outputFolder = $ARGV[2];
 
-my $bin = "/BiOfs/BioTools/NGSQCToolkit_v2.3.2/QC/IlluQC.pl";
+my $bin = "/BiOfs/hmkim87/BioTools/NGSQCToolkit/2.3.3/QC/IlluQC_PRLL.pl";
 
 my $library = "N";
 my $type = "A";
@@ -27,7 +27,7 @@ my $option = "-l $cutOffReadLen4HQ -s $cutOffQualScore -t $statOutFmt -z $output
 my $command;
 $command = "perl $bin -pe $r1 $r2 $library $type $option";
 print $command."\n";
-system($command);
+#system($command);
 
 sub printUsage{
 	print "Usage: perl $0 <r1.fastq> <r2.fastq> <output directory>\n";
