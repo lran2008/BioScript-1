@@ -1,14 +1,36 @@
-#!/usr/bin/perl -w
-
+#!/usr/bin/perl
+use warnings;
 use strict;
 
-use File::Basename;
-use Cwd 'abs_path';
+## Program Info:
+#
+# Name:
+#
+# Function:
+#
+# Author: Hyunmin Kim
+#  Copyright (c) Genome Research Foundation, 2014,
+#  all rights reserved.
+#
+# Licence: This script may be used freely as long as no fee is charged
+#    for use, and as long as the author/copyright attributions
+#    are not removed.
+#
+# History:
+#   Version 1.0 (June 19, 2014): vcftools 0.1.12a
+##
+
+use File::Basename qw(dirname);
+use Cwd qw(abs_path);
+#use lib dirname(dirname abs_path $0) . '/perl/lib';
+use lib '/BiOfs/BioPeople/brandon/language/perl/lib/';
+
+use Brandon::General qw(say RoundXL);
+use Brandon::Bio::BioTools qw($SAMTOOLS $GATK $PICARD_PATH $BWA $VCFTOOLS_PATH $VCFTOOLS_LIB_PATH $BEDTOOLS_PATH $JAVA $qualimap $SNPEFF_PATH $VCFLIB_PATH $FASTQC);
 
 my $PWD = dirname(__FILE__);
 my $root = abs_path($PWD);  
 
-#vcftools_0.1.11
 if (@ARGV != 2){
 	printUsage();
 }
@@ -20,9 +42,8 @@ my $PATH_tabix = "/BiOfs/hmkim87/BioTools/tabix/0.2.6";
 my $bgzip = $PATH_tabix."/bgzip";
 my $tabix = $PATH_tabix."/tabix";
 
-my $vcftools = "/BiOfs/hmkim87/BioTools/vcftools/0.1.12";
-my $LIB_vcftools = $vcftools."/lib/perl5/site_perl";
-my $PATH_vcftools = $vcftools."/bin";
+my $LIB_vcftools = $VCFTOOLS_LIB_PATH;
+my $PATH_vcftools = $VCFTOOLS_PATH;
 my $merge = $PATH_vcftools."/vcf-merge";
 
 $ENV{'PATH'}.= ":".$PATH_tabix;

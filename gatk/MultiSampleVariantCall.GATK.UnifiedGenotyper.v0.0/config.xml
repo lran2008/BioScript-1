@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CONFIG>
+	<PARAMETERS>
+		<USER>brandon</USER>
+		<EMAIL>brandon.kim.hyunmin@gmail.com</EMAIL>
+		<PROJECT>KPGP_Multisample_calling_and_get_ped_map_file</PROJECT>
+		<SAMPLE_NAME>chrM</SAMPLE_NAME>
+		<PROJECT_DIR>/BiO/hmkim87/KPGP/Result/VariantCall.MultiSample.KPGP_53</PROJECT_DIR>
+	</PARAMETERS>
+
+	<DATA>
+		<BAM NAME='KPGP-00001'>/BiO3/hmkim87/KPGP/Data/BAM/KPGP-00001/chrM.recal.bam</BAM>
+		<BAM NAME='KPGP-00002'>/BiO3/hmkim87/KPGP/Data/BAM/KPGP-00002/chrM.recal.bam</BAM>
+		<BAM NAME='KPGP-00229'>/BiO3/hmkim87/KPGP/Data/BAM/KPGP-00229/chrM.recal.bam</BAM>
+	</DATA>
+</CONFIG>

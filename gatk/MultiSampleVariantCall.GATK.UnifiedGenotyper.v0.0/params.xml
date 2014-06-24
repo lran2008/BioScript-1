@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CONFIG>
+	<PARAMETERS>
+		<DATE>2013</DATE>
+		<EXPERIMENT>WGS</EXPERIMENT>
+
+		<JAVA>/BiOfs/hmkim87/Linux/jre1.7.0_51/bin/java</JAVA>
+
+		<GATK>
+			<program>/BiOfs/hmkim87/BioTools/GATK/2.3.9/GenomeAnalysisTKLite-2.3-9.jar</program>
+			<!--/BiOfs/hmkim87/BioTools/GATK/3.1-1/GenomeAnalysisTK.jar-->
+			<UnifiedGenotyper>
+				<mem>8g</mem>
+				<param>--genotype_likelihoods_model BOTH --output_mode EMIT_ALL_SITES --heterozygosity 0.0010 -dcov 200 -stand_call_conf 30.0 -stand_emit_conf 30.0 -nt 24 -nct 2</param>
+			</UnifiedGenotyper>
+			<!--
+			UnifiedGenotyper
+			\-\-output_mode <EMIT_VARIANTS_ONLY|EMIT_ALL_CONFIDENT_SITES|EMIT_ALL_SITES>
+			-->
+		</GATK>
+
+		<INDELS_RECAL>/BiOfs/hmkim87/BioResources/Reference/Human/Resources/gatk/2.3/hg19/Mills_and_1000G_gold_standard.indels.hg19.vcf</INDELS_RECAL>
+		<KGIND>/BiOfs/hmkim87/BioResources/Reference/Human/Resources/gatk/2.3/hg19/1000G_phase1.indels.hg19.vcf</KGIND>
+		<DBSNP>/BiOfs/hmkim87/BioResources/Reference/Human/Resources/dbsnp/dbsnp_138.hg19.vcf</DBSNP>	
+		<GATK_DBSNP>/BiOfs/hmkim87/BioResources/Reference/Human/Resources/gatk/2.3/hg19/dbsnp_138.hg19.vcf</GATK_DBSNP>
+		
+		<GENOME_NAME>hg19</GENOME_NAME>
+		<GENOME>/BiOfs/hmkim87/BioResources/Reference/Human/hg19/chrAll.fa</GENOME>
+		<GENOME_DICT>/BiOfs/hmkim87/BioResources/Reference/Human/hg19/chrAll.dict</GENOME_DICT>
+
+		<PERLLIB>/BiOfs/BioPeople/brandon/language/perl/lib</PERLLIB>
+
+		<DIR_NAME>
+			<RawQC>RawQC</RawQC>
+			<Filt>1_FilterFastq</Filt>
+			<FiltQC>FilterQC</FiltQC>
+			<AlignBAM>2_AlignBAM</AlignBAM>
+			<MergedBAM>3_MergedNoDedupBAM</MergedBAM>
+			<DedupBAM>3_DedupBAM</DedupBAM>
+			<SplitChrBAM>4_DedupChrBAM</SplitChrBAM>
+			<LocalRealign>5_LocalRealignBAM</LocalRealign>
+			<BaseRecalibration>6_BaseRecalBAM</BaseRecalibration>
+			<UnifiedGenotyper>7_UnifiedGenotyperVCF</UnifiedGenotyper>
+		</DIR_NAME>
+	</PARAMETERS>
+</CONFIG>
