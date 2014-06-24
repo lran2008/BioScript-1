@@ -4,9 +4,9 @@ use strict;
 
 ## Program Info:
 #
-# Name:
+# Name: vcf2plink with qsub
 #
-# Function:
+# Function: Convert vcf to plink (ped,map)
 #
 # Author: Hyunmin Kim
 #  Copyright (c) Genome Research Foundation, 2014,
@@ -17,33 +17,36 @@ use strict;
 #    are not removed.
 #
 # History:
-#   Version 1.0 (June 13, 2014): first non-beta release.
+#   Version 1.0 (June 24, 2014): first non-beta release.
 ##
 
-use File::Basename qw(dirname);
+use File::Basename;
 use Cwd qw(abs_path);
 use lib '/BiOfs/BioPeople/brandon/language/perl/lib/';
 
-use Brandon::Bio::BioTools qw($VCFTOOLS_PATH $VCFTOOLS_LIB_PATH);
+use Brandon::Bio::BioTools::VCFTOOLS;
+use Brandon::Bio::BioPipeline::Queue;
+
+use Data::Dumper;
 
 if (@ARGV != 2){
 	printUsage();
 }
-my $in_vcf = $ARGV[0];
-my $out_prefix = $ARGV[1];
+my $vcf_file = shift;
+my $out_prefix = shift;
 
-my $vcftools = "$VCFTOOLS_PATH/vcftools";
-my $cmd_vcf2plink = vcf2plink($in_vcf,$out_prefix);
-print $cmd_vcf2plink."\n";
-system($cmd_vcf2plink);
+my $tool_config = {
+	file => $vcf_file,
+	out => $out_prefix,
+	app => 'vcf2plink',
+};
 
-sub vcf2plink{
-	my $infile = $_[0];
-	my $prefix_output = $_[1];
+my $vcf2plink = Brandon::Bio::BioTools::VCFTOOLS->new($tool_config);
 
-	my $command = "$vcftools --vcf $infile --plink --out $prefix_output";
-	return $command;
-}
+my $debug = 1; # no run, just print
+
+my $vcf2plink_q = Brandon::Bio::BioPipeline::Queue->mini($vcf2plink->{command},$debug);
+$vcf2plink_q->run();
 
 sub printUsage{
 	print "Usage: perl $0 <in.vcf> <out_prefix>\n";
