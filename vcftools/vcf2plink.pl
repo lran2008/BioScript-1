@@ -27,7 +27,17 @@ use lib '/BiOfs/BioPeople/brandon/language/perl/lib/';
 use Brandon::Bio::BioTools::VCFTOOLS;
 use Brandon::Bio::BioPipeline::Queue;
 
+use Getopt::Long;
+
 use Data::Dumper;
+
+my ( $debug );
+Getopt::Long::Configure("pass_through");
+GetOptions(
+#      'config=s' => \$config_file,
+	'debug' => \$debug,
+#       'params=s' => \$params_file,
+);
 
 if (@ARGV != 2){
 	printUsage();
@@ -43,9 +53,7 @@ my $tool_config = {
 
 my $vcf2plink = Brandon::Bio::BioTools::VCFTOOLS->new($tool_config);
 
-my $debug = 1; # no run, just print
-
-my $vcf2plink_q = Brandon::Bio::BioPipeline::Queue->mini($vcf2plink->{command},$debug);
+my $vcf2plink_q = Brandon::Bio::BioPipeline::Queue->mini($vcf2plink,$debug);
 $vcf2plink_q->run();
 
 sub printUsage{

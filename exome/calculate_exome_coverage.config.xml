@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CONFIG>
+	<PARAMETERS>
+		<USER>brandon</USER>
+		<EMAIL>brandon.kim.hyunmin@gmail.com</EMAIL>
+		<PROJECT>PAPGI_WES_Coverage_Analysis</PROJECT>
+		<PROJECT_DIR>/BiO5/hmkim87/PGI-PAPGI-Genome-2012-08/WES/Coverage</PROJECT_DIR>
+		<REFERENCE_FASTA>/BiOfs/hmkim87/BioResources/Reference/Human/hg19/chrAll.fa</REFERENCE_FASTA>
+	</PARAMETERS>
+
+	<DATA>
+		<BAM kit_name='SureSelect_Human_All_Exon_V4'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1397.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_V4'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1309.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_V4'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1310.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_V4'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1311.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1312.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1313.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1314.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1324.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1325.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1326.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1327.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1328.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1329.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1330.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1331.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1332.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1333.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1334.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1335.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1336.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1337.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1338.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1339.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1340.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1341.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1342.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1343.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1344.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1345.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1346.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1347.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1348.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1349.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1350.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1351.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1352.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1353.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1354.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1355.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1356.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1357.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1358.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1359.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1360.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1361.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1362.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1363.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1364.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1365.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1366.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1367.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1368.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1369.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1370.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1371.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1372.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1373.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1374.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1375.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1376.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1377.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1378.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1379.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1380.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1381.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1382.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1383.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1384.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1385.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1386.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1387.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1388.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1389.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1390.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1391.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1392.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1393.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1394.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1395.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1396.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1397.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1398.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1399.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1400.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1401.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1402.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1403.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1404.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_V4'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1405.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1406.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1407.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_V4'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1408.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1409.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_V4'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1410.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_50Mb'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1411.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_V4'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1303D1412.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_V4'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1304D2110.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_V4'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1304D2111.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_V4'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1304D2112.final.bam</BAM>
+		<BAM kit_name='SureSelect_Human_All_Exon_V4'>/BiO/BioProjects/PGI-PAPGI-Genome-2012-08/Reports/GR/WES/Data/bam/T1304D2113.final.bam</BAM>
+	</DATA>
+
+	<BED>
+		<SureSelect_Human_All_Exon_V4>/BiOfs/hmkim87/BioResources/Reference/Human/Resources/BED/SureSelect_Human_All_Exon_V4/SureSelect_Human_All_Exon_V4.bed</SureSelect_Human_All_Exon_V4>
+		<SureSelect_Human_All_Exon_50Mb>/BiOfs/hmkim87/BioResources/Reference/Human/Resources/BED/SureSelect_Human_All_Exon_50Mb/SureSelect_Human_All_Exon_50Mb.bed</SureSelect_Human_All_Exon_50Mb>
+	</BED>
+</CONFIG>

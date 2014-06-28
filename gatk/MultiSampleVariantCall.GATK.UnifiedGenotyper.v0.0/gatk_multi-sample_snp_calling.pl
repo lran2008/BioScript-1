@@ -1,6 +1,6 @@
 #!/usr/bin/perl
-#use warnings;
-#use strict;
+use warnings;
+use strict;
 #
 ### Program Info:
 ##
