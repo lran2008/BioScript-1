@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CONFIG>
+	<PARAMETERS>
+		<USER>brandon</USER>
+		<EMAIL>brandon.kim.hyunmin@gmail.com</EMAIL>
+		<PROJECT>PAPGI_WGS_Analysis</PROJECT>
+		<PROJECT_DIR>/BiO/brandon/PAPGI/Data/VCF_Sample_Combined</PROJECT_DIR>
+	</PARAMETERS>
+
+	<DATA>
+		<VCFs>/BiO/brandon/PAPGI/Data/VCF/*/*.chr22.vcf</VCFs>
+		<VCFs>/BiO/brandon/PAPGI/Data/VCF/*/*.chr21.vcf</VCFs>
+	</DATA>
+
+	<GATK_CombineVariants_PARAM>-genotypeMergeOptions UNIQUIFY</GATK_CombineVariants_PARAM>
+
+	<REF_FASTA>/BiOfs/hmkim87/BioResources/Reference/Human/hs37d5/chrAll.fa</REF_FASTA>
+</CONFIG>
