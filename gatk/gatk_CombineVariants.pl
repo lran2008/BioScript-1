@@ -19,6 +19,8 @@ use strict;
 # History:
 #   Version 1.0 (June 28, 2014): just one vcf file processing
 #   Version 1.1 (June 30, 2014): multi vcf file pattern processing
+# Update (required)
+#   - set the cpu param in qsub (because, If you analysis the chr3 with WGS 66 sample, require about 10 cpu)
 ##
 
 use File::Basename;
@@ -70,12 +72,20 @@ foreach my $vcf_pattern ( @{$set->{data}->{VCFs}} ){
 		reference_sequence => $ref_fasta,
 		app => "CombineVariants",
 		param => $param,	
-		java_opts => "-Xmx8g -jar",
+		java_opts => "-Xmx24g -jar",
 	};
 	my $combine_vcf = Brandon::Bio::BioTools::GATK->new($gatk_config);
 
-	$combine_vcf->{name} = $chrName;
-	my $job_combine_vcf = Brandon::Bio::BioPipeline::Queue->mini($combine_vcf,$debug);
+	#$combine_vcf->{name} = $chrName;
+
+	my $q_config ={
+		command => $combine_vcf->{command},
+		name => $chrName,
+		slot_range => 10,
+		depend_name => undef,
+	};
+	my $job_combine_vcf = Brandon::Bio::BioPipeline::Queue->mini($q_config,$debug);
+	$job_combine_vcf->make();
 	$job_combine_vcf->run();
 }
 
