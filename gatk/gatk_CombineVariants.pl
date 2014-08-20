@@ -72,7 +72,7 @@ foreach my $vcf_pattern ( @{$set->{data}->{VCFs}} ){
 		reference_sequence => $ref_fasta,
 		app => "CombineVariants",
 		param => $param,	
-		java_opts => "-Xmx24g -jar",
+		java_opts => "-Xmx24g -jar", # chr1 vcf file , about 3 days
 	};
 	my $combine_vcf = Brandon::Bio::BioTools::GATK->new($gatk_config);
 

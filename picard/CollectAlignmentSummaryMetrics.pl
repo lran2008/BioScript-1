@@ -36,7 +36,7 @@ use File::Basename;
 
 
 my ( $debug, $helpFlag );
-my ($input_file, $out_file, $ref_file);
+my ($input_file, $out_file, $ref_file, $job_name);
 Getopt::Long::Configure("pass_through"); #If pass_through is also enabled, options processing will terminate at the first unrecognized option, or non-option, whichever comes first.
 GetOptions(
 	'debug' => \$debug,
@@ -44,6 +44,7 @@ GetOptions(
         "i|input=s" => \$input_file,
         "o|output=s" => \$out_file,
 	"r|reference=s" => \$ref_file,
+	"n|jobname=s" => \$job_name,	
 );
 
 my $msg = "Arguments: [-i input bam file] [-o output report file] [-r reference fasta file] (-d debug mode)\t\n";
@@ -68,9 +69,13 @@ sub run{
 		REFERENCE_SEQUENCE => $ref,
 		VALIDATION_STRINGENCY => 'LENIENT',
 		app => 'CollectAlignmentSummaryMetrics',
+		name => $job_name,
+		script => $inputpath."/".$job_name.".sh",
+		stdout => $inputpath."/".$job_name.".log",
 	};
 	my $proc = Brandon::Bio::BioTools::PICARD->new($tool_config);
 	my $job = Brandon::Bio::BioPipeline::Queue->mini($proc,$debug);
+	$job->make();
 	$job->run();
 }
 

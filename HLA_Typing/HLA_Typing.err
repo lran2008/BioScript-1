@@ -1,0 +1,128 @@
+Warning: A reporting limit ( -r All limit )should be set with the -r All option.
+# novoalign (V3.02.00 - Build Oct 22 2013 @ 08:35:33 - A short read aligner with qualities.
+# (C) 2008,2009,2010,2011 NovoCraft Technologies Sdn Bhd.
+# License file not found.
+# Licensed for evaluation, educational, and not-for-profit use only.
+#  novoalign -d /BiOfs/sgpark/BioTools/ATHLATES/Athlates_07082013/db/ref/Ref.nix -f /BiO/hmkim87/PAPGI/Exome/RawData/T1303D1399/T1303D1399_1.fastq /BiO/hmkim87/PAPGI/Exome/RawData/T1303D1399/T1303D1399_2.fastq -t 8 -o SAM -r All -l 80 -e 100 -i PE 200 140 
+# Starting at Tue Feb 18 09:43:22 2014
+# Interpreting input files as Illumina FASTQ, Casava Pipeline 1.8 & later.
+# Index Build Version: 3.2
+# Hash length: 10
+# Step size: 1
+[samopen] SAM header is present: 8230 sequences.
+#       Paired Reads: 33209459
+#      Pairs Aligned:    13889
+#     Read Sequences: 66418918
+#            Aligned:    31628
+#   Unique Alignment:     3008
+#   Gapped Alignment:        0
+#     Quality Filter:  3000343
+# Homopolymer Filter:       16
+#       Elapsed Time: 3020.740 (secs.)
+#           CPU Time: 49.03 (min.)
+# Fragment Length Distribution
+#	From	To	Count
+#	98	111	9
+#	112	125	20
+#	126	139	55
+#	140	153	77
+#	154	167	58
+#	168	181	100
+#	182	195	80
+#	196	209	80
+#	210	223	50
+#	224	237	38
+#	238	251	43
+#	252	265	24
+#	266	279	23
+#	280	293	12
+#	294	307	20
+#	308	321	17
+#	322	335	7
+#	336	349	7
+#	350	363	4
+#	364	377	1
+#	378	391	1
+#	392	405	2
+# Mean   199, Std Dev  55.0
+# Done at Tue Feb 18 10:33:43 2014
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[sam_read1] reference 'SN:HLA:HLA02803_V_01:01:01:03_517	LN:517	AS:Ref.nix
+x
+ix
+x
+s/sgpark/BioTools/ATHLATES/Athlates_07082013/db/ref/Ref.nix -f /BiO/hmkim87/PAPGI/Exome/RawData/T1303D1399/T1303D1399_1.fastq /BiO/hmkim87/PAPGI/Exome/RawData/T1303D1399/T1303D1399_2.fastq -t 8 -o SAM -r All -l 80 -e 100 -i PE 200 140
+' is recognized as '*'.
+[main_samview] truncated file.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[sam_read1] reference 'SN:HLA:HLA02803_V_01:01:01:03_517	LN:517	AS:Ref.nix
+x
+ix
+x
+s/sgpark/BioTools/ATHLATES/Athlates_07082013/db/ref/Ref.nix -f /BiO/hmkim87/PAPGI/Exome/RawData/T1303D1399/T1303D1399_1.fastq /BiO/hmkim87/PAPGI/Exome/RawData/T1303D1399/T1303D1399_2.fastq -t 8 -o SAM -r All -l 80 -e 100 -i PE 200 140
+' is recognized as '*'.
+[main_samview] truncated file.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.
+[samopen] SAM header is present: 8230 sequences.

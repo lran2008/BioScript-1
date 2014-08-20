@@ -22,11 +22,9 @@ use strict;
 
 use File::Basename qw(dirname);
 use Cwd qw(abs_path);
-#use lib dirname(dirname abs_path $0) . '/../../BioPeople/brandon/language/perl/lib';
 use lib '/BiOfs/BioPeople/brandon/language/perl/lib';
 
-use Brandon::General qw(say RoundXL);
-use Brandon::Bio::BioTools qw(%TOOL $SAMTOOLS $GATK $PICARD_PATH $BWA $VCFTOOLS_PATH $VCFTOOLS_LIB_PATH $BEDTOOLS_PATH);
+use Brandon::Bio::BioTools qw($SAMTOOLS $GATK $PICARD_PATH $BWA $VCFTOOLS_PATH $VCFTOOLS_LIB_PATH $BEDTOOLS_PATH);
 
 if (@ARGV != 3){
 	printUsage();
@@ -38,7 +36,7 @@ my $out = $ARGV[2];
 my $genomeCoverageBed = $BEDTOOLS_PATH."/genomeCoverageBed";
 
 my $command = "$genomeCoverageBed -ibam $input_bam -g $genome > $out";
-say $command;
+print $command."\n";
 system($command);
 
 sub printUsage{

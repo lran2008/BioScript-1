@@ -1,0 +1,760 @@
+Tue Feb 18 09:43:22 KST 2014
+/BiOfs/sgpark/BioTools/novocraft/novoalign -d /BiOfs/sgpark/BioTools/ATHLATES/Athlates_07082013/db/ref/Ref.nix -f /BiO/hmkim87/PAPGI/Exome/RawData/T1303D1399/T1303D1399_1.fastq /BiO/hmkim87/PAPGI/Exome/RawData/T1303D1399/T1303D1399_2.fastq -t 8 -o SAM -r All -l 80 -e 100 -i PE 200 140 | /BiOfs/sgpark/BioTools/samtools-0.1.19/samtools view -bS -h -F 4 - > /BiO/hmkim87/PAPGI/HLA_Test_Output//FirstBam.bam
+
+--------------------------------------------------------
+Running cmd:
+/BiO/hmkim87/BioTools/Athlates_11012013/bin/typing	 -bam /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.A.exon.sort.bam -exlbam /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.A.nonexon.sort.bam -msa /BiOfs/sgpark/BioTools/ATHLATES/Athlates_07082013/db/msa/A_nuc.txt -hd 2 -o /BiO/hmkim87/PAPGI/HLA_Test_Output//A/A
+--------------------------------------------------------
+
+	Obtain (un)paired-read names in /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.A.nonexon.sort.bam
+
+		#s&p names: 3604, 13187
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//A/A.raw.fa
+
+	Check BAM header of /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.A.exon.sort.bam
+
+	[WARNING]: /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.A.exon.sort.bam sort order: coordinate
+
+		Input BAM file should be sorted by queryname
+
+
+		8230 ref sequence(s) found; avg len = 905
+
+		0 platform(s) found: 
+
+	Merge PE for /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.A.exon.sort.bam
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//A/A.unpair.fa
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//A/A.pair.fa
+
+		Total, merged, unmerged, singleton:
+			 79306, 700(433 overlap), 0, 218
+
+		target, non_target, ratio:
+		1751	133	0.0759566
+
+	Discard reads containing unique 50-mers
+			average freq = 12
+		89 reads discarded
+	Assemble 918 reads...
+
+		iter: 0
+		seed_k = 150	140	130	120	110	100	90	80	70	60	50	40	
+		iter: 1
+		seed_k = 150	140	130	120	110	100	90	80	70	60	50	40	
+	15 contigs created 
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//A/A.contig.fa
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//A/A.contig.detail.txt
+
+	Read in cDNA MSA: /BiOfs/sgpark/BioTools/ATHLATES/Athlates_07082013/db/msa/A_nuc.txt
+
+		2010 refs in IMGT/HLA database;  MSA len = 1229
+
+		Exon starts:	1	74	388	684	1027	1144	1177	1225	
+
+	Typing ...
+
+		seed contigs...
+		go through each cDNA...
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//A/A.typing.txt
+
+Program finished successfully !
+
+
+--------------------------------------------------------
+Running cmd:
+/BiO/hmkim87/BioTools/Athlates_11012013/bin/typing	 -bam /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.B.exon.sort.bam -exlbam /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.B.nonexon.sort.bam -msa /BiOfs/sgpark/BioTools/ATHLATES/Athlates_07082013/db/msa/B_nuc.txt -hd 2 -o /BiO/hmkim87/PAPGI/HLA_Test_Output//B/B
+--------------------------------------------------------
+
+	Obtain (un)paired-read names in /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.B.nonexon.sort.bam
+
+		#s&p names: 3765, 13304
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//B/B.raw.fa
+
+	Check BAM header of /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.B.exon.sort.bam
+
+	[WARNING]: /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.B.exon.sort.bam sort order: coordinate
+
+		Input BAM file should be sorted by queryname
+
+
+		8230 ref sequence(s) found; avg len = 905
+
+		0 platform(s) found: 
+
+	Merge PE for /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.B.exon.sort.bam
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//B/B.unpair.fa
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//B/B.pair.fa
+
+		Total, merged, unmerged, singleton:
+			 56393, 583(356 overlap), 0, 57
+
+		target, non_target, ratio:
+		1239	16	0.0129136
+
+	Discard reads containing unique 50-mers
+			average freq = 10
+		62 reads discarded
+	Assemble 640 reads...
+
+		iter: 0
+		seed_k = 150	140	130	120	110	100	90	80	70	60	50	40	
+		iter: 1
+		seed_k = 150	140	130	120	110	100	90	80	70	60	50	40	
+	10 contigs created 
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//B/B.contig.fa
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//B/B.contig.detail.txt
+
+	Read in cDNA MSA: /BiOfs/sgpark/BioTools/ATHLATES/Athlates_07082013/db/msa/B_nuc.txt
+
+		2600 refs in IMGT/HLA database;  MSA len = 1224
+
+		Exon starts:	1	193	465	750	1027	1148	1181	
+
+	Typing ...
+
+		seed contigs...
+		go through each cDNA...
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//B/B.typing.txt
+
+Program finished successfully !
+
+
+--------------------------------------------------------
+Running cmd:
+/BiO/hmkim87/BioTools/Athlates_11012013/bin/typing	 -bam /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.C.exon.sort.bam -exlbam /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.C.nonexon.sort.bam -msa /BiOfs/sgpark/BioTools/ATHLATES/Athlates_07082013/db/msa/C_nuc.txt -hd 2 -o /BiO/hmkim87/PAPGI/HLA_Test_Output//C/C
+--------------------------------------------------------
+
+	Obtain (un)paired-read names in /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.C.nonexon.sort.bam
+
+		#s&p names: 3759, 13359
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//C/C.raw.fa
+
+	Check BAM header of /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.C.exon.sort.bam
+
+	[WARNING]: /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.C.exon.sort.bam sort order: coordinate
+
+		Input BAM file should be sorted by queryname
+
+
+		8230 ref sequence(s) found; avg len = 905
+
+		0 platform(s) found: 
+
+	Merge PE for /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.C.exon.sort.bam
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//C/C.unpair.fa
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//C/C.pair.fa
+
+		Total, merged, unmerged, singleton:
+			 36646, 528(285 overlap), 0, 63
+
+		target, non_target, ratio:
+		1135	16	0.0140969
+
+	Discard reads containing unique 50-mers
+			average freq = 9
+		68 reads discarded
+	Assemble 591 reads...
+
+		iter: 0
+		seed_k = 150	140	130	120	110	100	90	80	70	60	50	40	
+		iter: 1
+		seed_k = 150	140	130	120	110	100	90	80	70	60	50	40	
+	10 contigs created 
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//C/C.contig.fa
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//C/C.contig.detail.txt
+
+	Read in cDNA MSA: /BiOfs/sgpark/BioTools/ATHLATES/Athlates_07082013/db/msa/C_nuc.txt
+
+		1548 refs in IMGT/HLA database;  MSA len = 1160
+
+		Exon starts:	1	74	348	652	928	1075	1108	1156	
+
+	Typing ...
+
+		seed contigs...
+		go through each cDNA...
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//C/C.typing.txt
+
+Program finished successfully !
+
+
+--------------------------------------------------------
+Running cmd:
+/BiO/hmkim87/BioTools/Athlates_11012013/bin/typing	 -bam /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DQB1.exon.sort.bam -exlbam /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DQB1.nonexon.sort.bam -msa /BiOfs/sgpark/BioTools/ATHLATES/Athlates_07082013/db/msa/DQB1_nuc.txt -hd 2 -o /BiO/hmkim87/PAPGI/HLA_Test_Output//DQB1/DQB1
+--------------------------------------------------------
+
+	Obtain (un)paired-read names in /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DQB1.nonexon.sort.bam
+
+		#s&p names: 3776, 13493
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DQB1/DQB1.raw.fa
+
+	Check BAM header of /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DQB1.exon.sort.bam
+
+	[WARNING]: /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DQB1.exon.sort.bam sort order: coordinate
+
+		Input BAM file should be sorted by queryname
+
+
+		8230 ref sequence(s) found; avg len = 905
+
+		0 platform(s) found: 
+
+	Merge PE for /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DQB1.exon.sort.bam
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DQB1/DQB1.unpair.fa
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DQB1/DQB1.pair.fa
+
+		Total, merged, unmerged, singleton:
+			 4263, 394(243 overlap), 0, 46
+
+		target, non_target, ratio:
+		834	0	0
+
+	Discard reads containing unique 50-mers
+			average freq = 8
+		55 reads discarded
+	Assemble 440 reads...
+
+		iter: 0
+		seed_k = 150	140	130	120	110	100	90	80	70	60	50	40	
+		iter: 1
+		seed_k = 150	140	130	120	110	100	90	80	70	60	50	40	
+	13 contigs created 
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DQB1/DQB1.contig.fa
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DQB1/DQB1.contig.detail.txt
+
+	Read in cDNA MSA: /BiOfs/sgpark/BioTools/ATHLATES/Athlates_07082013/db/msa/DQB1_nuc.txt
+
+		175 refs in IMGT/HLA database;  MSA len = 810
+
+		Exon starts:	1	110	380	662	773	797	
+
+	Typing ...
+
+		seed contigs...
+		go through each cDNA...
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DQB1/DQB1.typing.txt
+
+Program finished successfully !
+
+
+--------------------------------------------------------
+Running cmd:
+/BiO/hmkim87/BioTools/Athlates_11012013/bin/typing	 -bam /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB1.exon.sort.bam -exlbam /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB1.nonexon.sort.bam -msa /BiOfs/sgpark/BioTools/ATHLATES/Athlates_07082013/db/msa/DRB_nuc.txt -hd 2 -o /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB1/DRB1
+--------------------------------------------------------
+
+	Obtain (un)paired-read names in /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB1.nonexon.sort.bam
+
+		#s&p names: 2909, 13376
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB1/DRB1.raw.fa
+
+	Check BAM header of /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB1.exon.sort.bam
+
+	[WARNING]: /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB1.exon.sort.bam sort order: coordinate
+
+		Input BAM file should be sorted by queryname
+
+
+		8230 ref sequence(s) found; avg len = 905
+
+		0 platform(s) found: 
+
+	Merge PE for /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB1.exon.sort.bam
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB1/DRB1.unpair.fa
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB1/DRB1.pair.fa
+
+		Total, merged, unmerged, singleton:
+			 8806, 511(292 overlap), 0, 913
+
+		target, non_target, ratio:
+		2059	124	0.0602234
+
+	Discard reads containing unique 50-mers
+			average freq = 7
+		235 reads discarded
+	Assemble 1424 reads...
+
+		iter: 0
+		seed_k = 150	140	130	120	110	100	90	80	70	60	50	40	
+		iter: 1
+		seed_k = 150	140	130	120	110	100	90	80	70	60	50	40	
+	66 contigs created 
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB1/DRB1.contig.fa
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB1/DRB1.contig.detail.txt
+
+	Read in cDNA MSA: /BiOfs/sgpark/BioTools/ATHLATES/Athlates_07082013/db/msa/DRB_nuc.txt
+
+		1256 refs in IMGT/HLA database;  MSA len = 811
+
+		Exon starts:	1	105	379	663	774	798	
+
+	Typing ...
+
+		seed contigs...
+		go through each cDNA...
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB1/DRB1.typing.txt
+
+Program finished successfully !
+
+
+--------------------------------------------------------
+Running cmd:
+/BiO/hmkim87/BioTools/Athlates_11012013/bin/typing	 -bam /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB2.exon.sort.bam -exlbam /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB2.nonexon.sort.bam -msa /BiOfs/sgpark/BioTools/ATHLATES/Athlates_07082013/db/msa/DRB_nuc.txt -hd 2 -o /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB2/DRB2
+--------------------------------------------------------
+
+	Obtain (un)paired-read names in /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB2.nonexon.sort.bam
+
+		#s&p names: 3822, 13887
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB2/DRB2.raw.fa
+
+[EXIT]: gather_alignments: Failed to locate bam index of file /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB2.exon.sort.bam
+
+--------------------------------------------------------
+Running cmd:
+/BiO/hmkim87/BioTools/Athlates_11012013/bin/typing	 -bam /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB3.exon.sort.bam -exlbam /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB3.nonexon.sort.bam -msa /BiOfs/sgpark/BioTools/ATHLATES/Athlates_07082013/db/msa/DRB_nuc.txt -hd 2 -o /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB3/DRB3
+--------------------------------------------------------
+
+	Obtain (un)paired-read names in /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB3.nonexon.sort.bam
+
+		#s&p names: 3822, 13887
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB3/DRB3.raw.fa
+
+	Check BAM header of /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB3.exon.sort.bam
+
+	[WARNING]: /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB3.exon.sort.bam sort order: coordinate
+
+		Input BAM file should be sorted by queryname
+
+
+		8230 ref sequence(s) found; avg len = 905
+
+		0 platform(s) found: 
+
+	Merge PE for /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB3.exon.sort.bam
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB3/DRB3.unpair.fa
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB3/DRB3.pair.fa
+
+		Total, merged, unmerged, singleton:
+			 35, 0(0 overlap), 0, 0
+
+		target, non_target, ratio:
+		20	20	1
+
+	Discard reads containing unique 50-mers
+[Warning] in get_kmerfreq: db.size() is 0
+		0 reads discarded
+[EXIT]: clean_reads: db is empty
+
+--------------------------------------------------------
+Running cmd:
+/BiO/hmkim87/BioTools/Athlates_11012013/bin/typing	 -bam /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB4.exon.sort.bam -exlbam /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB4.nonexon.sort.bam -msa /BiOfs/sgpark/BioTools/ATHLATES/Athlates_07082013/db/msa/DRB_nuc.txt -hd 2 -o /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB4/DRB4
+--------------------------------------------------------
+
+	Obtain (un)paired-read names in /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB4.nonexon.sort.bam
+
+		#s&p names: 3587, 13288
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB4/DRB4.raw.fa
+
+	Check BAM header of /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB4.exon.sort.bam
+
+	[WARNING]: /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB4.exon.sort.bam sort order: coordinate
+
+		Input BAM file should be sorted by queryname
+
+
+		8230 ref sequence(s) found; avg len = 905
+
+		0 platform(s) found: 
+
+	Merge PE for /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB4.exon.sort.bam
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB4/DRB4.unpair.fa
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB4/DRB4.pair.fa
+
+		Total, merged, unmerged, singleton:
+			 5311, 599(332 overlap), 0, 235
+
+		target, non_target, ratio:
+		1542	109	0.0706874
+
+	Discard reads containing unique 50-mers
+			average freq = 10
+		119 reads discarded
+	Assemble 834 reads...
+
+		iter: 0
+		seed_k = 150	140	130	120	110	100	90	80	70	60	50	40	
+		iter: 1
+		seed_k = 150	140	130	120	110	100	90	80	70	60	50	40	
+	20 contigs created 
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB4/DRB4.contig.fa
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB4/DRB4.contig.detail.txt
+
+	Read in cDNA MSA: /BiOfs/sgpark/BioTools/ATHLATES/Athlates_07082013/db/msa/DRB_nuc.txt
+
+		1256 refs in IMGT/HLA database;  MSA len = 811
+
+		Exon starts:	1	105	379	663	774	798	
+
+	Typing ...
+
+		seed contigs...
+		go through each cDNA...
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB4/DRB4.typing.txt
+
+Program finished successfully !
+
+
+--------------------------------------------------------
+Running cmd:
+/BiO/hmkim87/BioTools/Athlates_11012013/bin/typing	 -bam /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB5.exon.sort.bam -exlbam /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB5.nonexon.sort.bam -msa /BiOfs/sgpark/BioTools/ATHLATES/Athlates_07082013/db/msa/DRB_nuc.txt -hd 2 -o /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB5/DRB5
+--------------------------------------------------------
+
+	Obtain (un)paired-read names in /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB5.nonexon.sort.bam
+
+		#s&p names: 3806, 13885
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB5/DRB5.raw.fa
+
+	Check BAM header of /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB5.exon.sort.bam
+
+	[WARNING]: /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB5.exon.sort.bam sort order: coordinate
+
+		Input BAM file should be sorted by queryname
+
+
+		8230 ref sequence(s) found; avg len = 905
+
+		0 platform(s) found: 
+
+	Merge PE for /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB5.exon.sort.bam
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB5/DRB5.unpair.fa
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB5/DRB5.pair.fa
+
+		Total, merged, unmerged, singleton:
+			 22, 2(2 overlap), 0, 16
+
+		target, non_target, ratio:
+		21	1	0.047619
+
+	Discard reads containing unique 50-mers
+			average freq = 2
+		3 reads discarded
+	Assemble 18 reads...
+
+		iter: 0
+		seed_k = 150	140	130	120	110	100	90	80	70	60	50	40	
+		iter: 1
+		seed_k = 150	140	130	120	110	100	90	80	70	60	50	40	
+	1 contigs created 
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB5/DRB5.contig.fa
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB5/DRB5.contig.detail.txt
+
+	Read in cDNA MSA: /BiOfs/sgpark/BioTools/ATHLATES/Athlates_07082013/db/msa/DRB_nuc.txt
+
+		1256 refs in IMGT/HLA database;  MSA len = 811
+
+		Exon starts:	1	105	379	663	774	798	
+
+	Typing ...
+
+		seed contigs...
+		go through each cDNA...
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB5/DRB5.typing.txt
+
+Program finished successfully !
+
+
+--------------------------------------------------------
+Running cmd:
+/BiO/hmkim87/BioTools/Athlates_11012013/bin/typing	 -bam /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB6.exon.sort.bam -exlbam /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB6.nonexon.sort.bam -msa /BiOfs/sgpark/BioTools/ATHLATES/Athlates_07082013/db/msa/DRB_nuc.txt -hd 2 -o /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB6/DRB6
+--------------------------------------------------------
+
+	Obtain (un)paired-read names in /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB6.nonexon.sort.bam
+
+		#s&p names: 3822, 13887
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB6/DRB6.raw.fa
+
+[EXIT]: gather_alignments: Failed to locate bam index of file /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB6.exon.sort.bam
+
+--------------------------------------------------------
+Running cmd:
+/BiO/hmkim87/BioTools/Athlates_11012013/bin/typing	 -bam /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB7.exon.sort.bam -exlbam /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB7.nonexon.sort.bam -msa /BiOfs/sgpark/BioTools/ATHLATES/Athlates_07082013/db/msa/DRB_nuc.txt -hd 2 -o /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB7/DRB7
+--------------------------------------------------------
+
+	Obtain (un)paired-read names in /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB7.nonexon.sort.bam
+
+		#s&p names: 3721, 13813
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB7/DRB7.raw.fa
+
+	Check BAM header of /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB7.exon.sort.bam
+
+	[WARNING]: /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB7.exon.sort.bam sort order: coordinate
+
+		Input BAM file should be sorted by queryname
+
+
+		8230 ref sequence(s) found; avg len = 905
+
+		0 platform(s) found: 
+
+	Merge PE for /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB7.exon.sort.bam
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB7/DRB7.unpair.fa
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB7/DRB7.pair.fa
+
+		Total, merged, unmerged, singleton:
+			 262, 74(71 overlap), 0, 101
+
+		target, non_target, ratio:
+		252	3	0.0119048
+
+	Discard reads containing unique 50-mers
+			average freq = 15
+		14 reads discarded
+	Assemble 175 reads...
+
+		iter: 0
+		seed_k = 150	140	130	120	110	100	90	80	70	60	50	40	
+		iter: 1
+		seed_k = 150	140	130	120	110	100	90	80	70	60	50	40	
+	4 contigs created 
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB7/DRB7.contig.fa
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB7/DRB7.contig.detail.txt
+
+	Read in cDNA MSA: /BiOfs/sgpark/BioTools/ATHLATES/Athlates_07082013/db/msa/DRB_nuc.txt
+
+		1256 refs in IMGT/HLA database;  MSA len = 811
+
+		Exon starts:	1	105	379	663	774	798	
+
+	Typing ...
+
+		seed contigs...
+		go through each cDNA...
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB7/DRB7.typing.txt
+
+Program finished successfully !
+
+
+--------------------------------------------------------
+Running cmd:
+/BiO/hmkim87/BioTools/Athlates_11012013/bin/typing	 -bam /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB8.exon.sort.bam -exlbam /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB8.nonexon.sort.bam -msa /BiOfs/sgpark/BioTools/ATHLATES/Athlates_07082013/db/msa/DRB_nuc.txt -hd 2 -o /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB8/DRB8
+--------------------------------------------------------
+
+	Obtain (un)paired-read names in /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB8.nonexon.sort.bam
+
+		#s&p names: 3786, 13820
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB8/DRB8.raw.fa
+
+	Check BAM header of /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB8.exon.sort.bam
+
+	[WARNING]: /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB8.exon.sort.bam sort order: coordinate
+
+		Input BAM file should be sorted by queryname
+
+
+		8230 ref sequence(s) found; avg len = 905
+
+		0 platform(s) found: 
+
+	Merge PE for /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB8.exon.sort.bam
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB8/DRB8.unpair.fa
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB8/DRB8.pair.fa
+
+		Total, merged, unmerged, singleton:
+			 175, 67(61 overlap), 0, 36
+
+		target, non_target, ratio:
+		175	5	0.0285714
+
+	Discard reads containing unique 50-mers
+			average freq = 18
+		10 reads discarded
+	Assemble 103 reads...
+
+		iter: 0
+		seed_k = 150	140	130	120	110	100	90	80	70	60	50	40	
+		iter: 1
+		seed_k = 150	140	130	120	110	100	90	80	70	60	50	40	
+	2 contigs created 
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB8/DRB8.contig.fa
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB8/DRB8.contig.detail.txt
+
+	Read in cDNA MSA: /BiOfs/sgpark/BioTools/ATHLATES/Athlates_07082013/db/msa/DRB_nuc.txt
+
+		1256 refs in IMGT/HLA database;  MSA len = 811
+
+		Exon starts:	1	105	379	663	774	798	
+
+	Typing ...
+
+		seed contigs...
+		go through each cDNA...
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB8/DRB8.typing.txt
+
+Program finished successfully !
+
+
+--------------------------------------------------------
+Running cmd:
+/BiO/hmkim87/BioTools/Athlates_11012013/bin/typing	 -bam /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB9.exon.sort.bam -exlbam /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB9.nonexon.sort.bam -msa /BiOfs/sgpark/BioTools/ATHLATES/Athlates_07082013/db/msa/DRB_nuc.txt -hd 2 -o /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB9/DRB9
+--------------------------------------------------------
+
+	Obtain (un)paired-read names in /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB9.nonexon.sort.bam
+
+		#s&p names: 3787, 13839
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB9/DRB9.raw.fa
+
+	Check BAM header of /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB9.exon.sort.bam
+
+	[WARNING]: /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB9.exon.sort.bam sort order: coordinate
+
+		Input BAM file should be sorted by queryname
+
+
+		8230 ref sequence(s) found; avg len = 905
+
+		0 platform(s) found: 
+
+	Merge PE for /BiO/hmkim87/PAPGI/HLA_Test_Output//Second.DRB9.exon.sort.bam
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB9/DRB9.unpair.fa
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB9/DRB9.pair.fa
+
+		Total, merged, unmerged, singleton:
+			 131, 48(39 overlap), 0, 35
+
+		target, non_target, ratio:
+		131	0	0
+
+	Discard reads containing unique 50-mers
+			average freq = 20
+		6 reads discarded
+	Assemble 83 reads...
+
+		iter: 0
+		seed_k = 150	140	130	120	110	100	90	80	70	60	50	40	
+		iter: 1
+		seed_k = 150	140	130	120	110	100	90	80	70	60	50	40	
+	1 contigs created 
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB9/DRB9.contig.fa
+
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB9/DRB9.contig.detail.txt
+
+	Read in cDNA MSA: /BiOfs/sgpark/BioTools/ATHLATES/Athlates_07082013/db/msa/DRB_nuc.txt
+
+		1256 refs in IMGT/HLA database;  MSA len = 811
+
+		Exon starts:	1	105	379	663	774	798	
+
+	Typing ...
+
+		seed contigs...
+		go through each cDNA...
+
+		create file: /BiO/hmkim87/PAPGI/HLA_Test_Output//DRB9/DRB9.typing.txt
+
+Program finished successfully !
+
+Tue Feb 18 10:44:41 KST 2014

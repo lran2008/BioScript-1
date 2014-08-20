@@ -25,11 +25,10 @@ use strict;
 
 use File::Basename qw(dirname);
 use Cwd qw(abs_path);
-#use lib dirname(dirname abs_path $0) . '/perl/lib';
 use lib '/BiOfs/BioPeople/brandon/language/perl/lib/';
 
 use Brandon::General qw(say RoundXL);
-use Brandon::Bio::BioTools qw(%TOOL $SAMTOOLS $GATK $PICARD_PATH $BWA $VCFTOOLS_PATH $VCFTOOLS_LIB_PATH $BEDTOOLS_PATH $JAVA $qualimap $SNPEFF_PATH);
+use Brandon::Bio::BioTools qw($SAMTOOLS $GATK $PICARD_PATH $BWA $VCFTOOLS_PATH $VCFTOOLS_LIB_PATH $BEDTOOLS_PATH $JAVA $qualimap $SNPEFF_PATH);
 
 use Data::Dumper;
 
