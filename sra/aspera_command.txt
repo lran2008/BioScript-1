@@ -1,0 +1,1 @@
+/Share/gisys/hmkim87/.aspera/connect/bin/ascp -i /Share/gisys/hmkim87/SRA_Upload/sra-3.ssh.priv -QT -l 600m /Share/jinsilhanna/Projects/Horse_20140808/TG1111D2628/TG1111D2628.R2_049.flt.fastq.gz asp-sra@upload.ncbi.nlm.nih.gov:incoming

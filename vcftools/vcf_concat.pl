@@ -1,7 +1,39 @@
 #!/usr/bin/perl -w
-
 use strict;
 use File::stat;
+
+## Program Info:
+#
+# Name: vcf concat script
+#
+# Function: vcf file concat (chromosome) using vcftools
+#
+# Author: Hyunmin Kim
+#  Copyright (c) Genome Research Foundation, 2014,
+#  all rights reserved.
+#
+# Licence: This script may be used freely as long as no fee is charged
+#    for use, and as long as the author/copyright attributions
+#    are not removed.
+#
+# History:
+#   Version 1.0 (Aug 26, 2014): vcftools 0.1.12a
+##
+
+use Getopt::Long;
+
+my ($PATH_tabix,$vcftools);
+GetOptions(
+	'VCFTOOLS=s' => \$vcftools,
+	'TABIX=s' => \$PATH_tabix
+);
+
+if (!$vcftools){
+	$vcftools = "/BiOfs/hmkim87/BioTools/vcftools/0.1.12a/";
+}
+if (!$PATH_tabix){
+	$PATH_tabix = "/BiOfs/hmkim87/BioTools/tabix/0.2.6";
+}
 
 if (@ARGV != 2){
 	printUsage();
@@ -10,17 +42,16 @@ if (@ARGV != 2){
 my $INPUT_S = $ARGV[0];
 my $VCF_OUT = $ARGV[1];
 
-my $PATH_tabix = "/nG/Process/Tools/tabix/tabix-0.2.6";
 my $bgzip = $PATH_tabix."/bgzip";
 my $tabix = $PATH_tabix."/tabix";
 
-my $vcftools = "/nG/Process/Tools/VCFtools/vcftools_0.1.10";
 my $LIB_vcftools = $vcftools."/lib/perl5/site_perl";
 my $PATH_vcftools = $vcftools."/bin";
 my $concat = $PATH_vcftools."/vcf-concat";
 my $vcf_sort = $PATH_vcftools."/vcf-sort";
 
 #print "export PATH=$PATH_tabix:\$PATH\n";
+$ENV{'PATH'} .= ":".$PATH_tabix;
 
 my @FILES = glob($INPUT_S);
 my @FILES_;

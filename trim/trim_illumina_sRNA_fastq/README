@@ -1,0 +1,139 @@
+LICENSE
+    trim_illumina_sRNA_fastq.pl
+
+    Copyright (C) 2012 Michael J. Axtell
+
+    This program is free software: you can redistribute it and/or modify it
+    under the terms of the GNU General Public License as published by the
+    Free Software Foundation, either version 3 of the License, or (at your
+    option) any later version.
+
+    This program is distributed in the hope that it will be useful, but
+    WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+    Public License for more details.
+
+    You should have received a copy of the GNU General Public License along
+    with this program. If not, see <http://www.gnu.org/licenses/>.
+
+SYNOPSIS
+    Trim the 3' ends from a DNA-spaced FASTQ-Illumina file based on
+    user-supplied adapter sequence.
+
+    In nearly all small RNA sequencing experiments, the read-length is
+    longer than the biological RNAs of interest. Typically the 1st nt of the
+    sequencing read is the 5', sense nt of the biological RNA, and the end
+    of the biological small RNA occurs somewhere in the middle of read. This
+    program identifies the 3' adapter using fuzzy matching, and trims it
+    from the input read and from the corresponding quality values, and
+    outputs the properly trimmed data in FASTQ-Illumina format.
+
+INSTALL
+    ensure the script is executable
+
+        chmod +x trim_illumina_sRNA_fastq.pl
+
+    ensure the script is in your PATH (examples):
+
+        sudo cp trim_illumina_sRNA_fastq.pl /usr/bin/
+
+    OR just for one session assuming script is in your working directory:
+
+        PATH=$PATH:.
+    
+    ensure 'perl' is located in /usr/bin/ .. if not, edit line 1 of script
+    accordingly
+
+    ensure String::Approx is installed to your PERL ..
+    http://search.cpan.org/~jhi/String-Approx-3.26/Approx.pm
+
+USAGE
+    usage for fastq.gz compressed files:
+
+        gzip -d -c [input.fastq.gz] | trim_illumina_sRNA_fastq.pl -o [ok.fastq] -p [pseudo-trimmed.fastq] -a [adapter_sequence] -e [max_edit_distance] -q [Y/N]
+
+    usage for uncompressed .fastq files:
+
+        trim_illumina_sRNA_fastq.pl -o [ok.fastq] -p [pseudo-trimmed.fastq] -a [adapter_sequence] -e [max_edit_distance] -q [Y/N] < [input.fastq]
+
+OPTIONS
+    All options are required to be supplied by the user
+
+    -o : name of the output .fastq file containing properly trimmed reads.
+    If file already exists, program will quit and complain
+
+    -p : name of the output .fastq file containing 'psuedo-trimmed' reads
+    (see below). If file already exists, program will quit and complain.
+
+    -a : Adapter sequence to search for. Must be at least 8 character in
+    length, and contain only ACTUGactug characters. Only the first 15nts of
+    the supplied adapter will be used if you provide a longer sequence
+
+    -e : Maximum allowed edit distance to match the adapter. Must be either
+    0, 1, or 2. Only substitutions are allowed, no insertions or deletions.
+
+    -q : Output quality values? (Y/N). e.g. report in fastq format (Y) or
+    fasta format (N). Default is Y
+
+NOTES
+  Pseudotrimmed reads
+
+    Reads for which no adapter was matched fall into one of two categories:
+    Machine noise/total garbage, and biological RNAs longer than
+    (read_length - adapter_length). In many experiments these are not
+    useful, but there may be some cases where examining these reads is
+    desired. A conservative approach is taken, where the read is
+    'pseudo-trimmed' by removing x nts off of the 3' end, where x =
+    (read_length - adapter_length + 1). This fully removes any
+    non-recognized bits of adapter off of the 3' end. For example, for 50nt
+    reads and a 15nt adapter, the maximum RNA size that can be correctly
+    recognized is 35nts; any non-adapter matched reads wiould be
+    pseudo-trimmed to 36nts in length. HOWEVER, it is important to remember
+    that for these reads the 'pseudo-trimmed' size does NOT represent the
+    true size of the original RNA, and that is why they are put into a
+    separate file. In addition, a lot of them are probably garbage.
+
+  Non-reported reads
+
+    There are three categories of reads that don't get reported: Rejected,
+    Adapter-dimers, and too-short. Rejected reads have one or more non ATCG
+    characters after trimming. Adapter-dimers have an adapter-match right at
+    the first nt. Too short RNAs are those that are between 1 and 14nts
+    after adapter trimming. The output tracks these but they are not
+    reported in the fastq output files
+
+  What if I don't know my adapter sequence?
+
+    You can use a script called 'find_3p_adapter.pl' to infer your 3p
+    adapter sequence. This requires that you know (or at least are pretty
+    sure) of the sequence of an abundant microRNA in your sample. See
+    documentation for 'find_3p_adapter.pl' for more details.
+
+  No Paired-End support
+
+    This program is built for single-end fragments. In general, we don't
+    expect to encounter paired-end experiments for small RNA experiments, as
+    the small RNAs of interest are shorter than the typical nex-gen read
+    lengths.
+
+ACKNOWLEDGEMENTS
+    The usage of String::Approx was suggested by Istvan Albert. The specific
+    implementation of String::Approx 'amatch' was closely modeled after that
+    found in
+    http://www.bcgsc.ca/platform/bioinfo/software/adapter-trimming-for-small
+    -rna-sequencing, Authored by Andy Chu at the BC Cancer Agency, Canada's
+    Michael Smith Genome Sciences Center
+
+VERSIONS
+    0.1 : Initial release March 9, 2012
+
+    0.2 : March 27, 2012 : Added option to output just .fasta of trimmed and
+    pseudo-trimmed reads, omitting quality values
+
+    0.3 : April 25, 2012 : Fixed bug that caused mis-parsing of fastq files
+    where the "plus sign" line includes the header information, instead of
+    just being a + sign
+
+AUTHOR
+    Michael J. Axtell, Penn State University, mja18@psu.edu
+
