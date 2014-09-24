@@ -1,0 +1,16 @@
+Raw reads (fastq)
+/BiO3/BioProjects/SMU-Potato-SmallRNA-2014-09/Data/fastq/090811_s_1_seq_GER-1-4.txt.fastq
+
+Barcode
+/BiO3/BioProjects/SMU-Potato-SmallRNA-2014-09/Data/barcode/mybarcodes.txt
+
+Script (Barcode splitter)
+/BiO3/BioProjects/SMU-Potato-SmallRNA-2014-09/Script/fastx_barcode_splitter.pl
+
+Output directory
+/BiO3/BioProjects/SMU-Potato-SmallRNA-2014-09/Data/sample_fastq/
+
+
+Command
+
+cat /BiO3/BioProjects/SMU-Potato-SmallRNA-2014-09/Data/fastq/090811_s_1_seq_GER-1-4.txt.fastq |  /BiO3/BioProjects/SMU-Potato-SmallRNA-2014-09/Script/fastx_barcode_splitter.pl --bcfile /BiO3/BioProjects/SMU-Potato-SmallRNA-2014-09/Data/barcode/mybarcodes.txt --bol --mismatches 1 --prefix /BiO3/BioProjects/SMU-Potato-SmallRNA-2014-09/Data/sample_fastq/smu_ --suffix ".fastq"
