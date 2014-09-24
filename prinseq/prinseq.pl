@@ -3,13 +3,11 @@
 use strict;
 
 # tool
-my $fastx_toolkit_path = "/gg/tool/fastx_toolkit_0.0.13/bin";
-my $fastq_quality_filter = $fastx_toolkit_path."/fastq_quality_filter";
-my $fastx_clipper = $fastx_toolkit_path."/fastx_clipper";
-my $prinseq = "/gg/tool/prinseq-lite-0.20.4/prinseq-lite.pl";
-my $prinseq_graphs = "/gg/tool/prinseq-lite-0.20.4/prinseq-graphs.pl";
+my $prinseq = "/BiOfs/hmkim87/BioTools/prinseq/0.20.4/prinseq-lite.pl";
+my $prinseq_graphs = "/BiOfs/hmkim87/BioTools/prinseq/0.20.4/prinseq-graphs.pl";
 
 # prinseq params
+=pod
 my @params = qw(
 -ns_max_p 5
 -trim_tail_left 6
@@ -20,24 +18,32 @@ my @params = qw(
 -trim_left 1 
 -trim_right 1
 );
-#trim_tail http://ccb.jhu.edu/software/fqtrim/index.shtml
 
 my $param = join " ", @params;
-my $r1 = "/gg/data/fastq/testdata_R1.fq";
-my $r2 = "/gg/data/fastq/testdata_R2.fq";
+=cut
+#trim_tail http://ccb.jhu.edu/software/fqtrim/index.shtml
+
+
+my $param = "-derep_min 2 -derep 14"; 
+
+my $r1 = "/BiO3/hmkim87/GACHON-Human-SmallRNA-2014-09/Raw/TN1405R1134_1.fq";
+my $r2 = "/BiO3/hmkim87/GACHON-Human-SmallRNA-2014-09/Raw/TN1405R1134_2.fq";
+
 my $out_good = "null";
 my $out_bad = "null";
-my $logfile = "/gg/tmp/prinseq/log.txt";
-my $graph_data = "/gg/tmp/prinseq/graph.data";
+
+my $logfile = "/BiO3/hmkim87/GACHON-Human-SmallRNA-2014-09/Raw/TN1405R1134.prinseq.log";
+my $graph_data = "/BiO3/hmkim87/GACHON-Human-SmallRNA-2014-09/Raw/TN1405R1134.prinseq.graph.data";
+
 my $prinseq_option = "-verbose -graph_data $graph_data $param";
 prinseq($r1,$r2,$out_good,$out_bad,$prinseq_option,$logfile);
 
-$out_good = "/gg/tmp/prinseq/testdata_clean";
-$out_bad = "/gg/tmp/prinseq/testdata_bad";
-$prinseq_option = "-verbose $param";
-prinseq($r1,$r2,$out_good,$out_bad,$prinseq_option,$logfile);
+#$out_good = "/gg/tmp/prinseq/testdata_clean";
+#$out_bad = "/gg/tmp/prinseq/testdata_bad";
+#$prinseq_option = "-verbose $param";
+#prinseq($r1,$r2,$out_good,$out_bad,$prinseq_option,$logfile);
 
-my $graph_out_prefix = "/gg/tmp/prinseq/graph";
+my $graph_out_prefix = "/BiO3/hmkim87/GACHON-Human-SmallRNA-2014-09/Raw/TN1405R1134.prinseq.graph";
 my $graph_option = "-png_all";
 prinseq_graph($graph_data,$graph_out_prefix,$graph_option);
 
